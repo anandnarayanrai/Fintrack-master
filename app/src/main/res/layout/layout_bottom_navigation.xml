@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadingEdge="vertical"
+        app:cardCornerRadius="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="3dp"
+            android:weightSum="4">
+
+            <Button
+                android:id="@+id/bt_portfolio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/background_ripple"
+                android:drawableTop="@drawable/ic_menu"
+                android:gravity="center"
+                android:text="Portfolio" />
+
+            <Button
+                android:id="@+id/bt_product"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/background_ripple"
+                android:drawableTop="@drawable/ic_menu"
+                android:gravity="center"
+                android:text="Product" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/background_ripple"
+                android:drawableTop="@drawable/ic_menu"
+                android:gravity="center"
+                android:text="Portfolio" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/background_ripple"
+                android:drawableTop="@drawable/ic_menu"
+                android:gravity="center"
+                android:text="Portfolio" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.design.widget.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:background="?android:attr/windowBackground"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/background_ripple"
+                android:drawableTop="@drawable/ic_menu"
+                android:gravity="center"
+                android:text="Portfolio" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/background_ripple"
+                android:drawableTop="@drawable/ic_menu"
+                android:gravity="center"
+                android:text="Portfolio" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/background_ripple"
+                android:drawableTop="@drawable/ic_menu"
+                android:gravity="center"
+                android:text="Portfolio" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/background_ripple"
+                android:drawableTop="@drawable/ic_menu"
+                android:gravity="center"
+                android:text="Portfolio" />
+        </LinearLayout>
+    </android.support.design.widget.BottomNavigationView>
+</android.support.constraint.ConstraintLayout>

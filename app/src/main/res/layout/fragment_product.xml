@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gray5"
+    tools:context=".product.ProductFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_banner"
+            android:layout_width="match_parent"
+            android:layout_height="170dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/vp_banner"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="3dp"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="135dp"
+                    android:layout_weight="1"
+                    android:animateLayoutChanges="true"
+                    android:animationCache="true"
+                    android:fadingEdge="horizontal"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="2dp"
+                    app:cardUseCompatPadding="true">
+
+                    <TextView
+                        android:id="@+id/tv_mutualfund"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableTop="@drawable/dashboard"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:text="@string/mutual_funds"
+                        android:textColor="@color/color_dark_gray" />
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="135dp"
+                    android:layout_weight="1"
+                    android:animateLayoutChanges="true"
+                    android:animationCache="true"
+                    android:fadingEdge="horizontal"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="2dp"
+                    app:cardUseCompatPadding="true">
+
+                    <TextView
+                        android:id="@+id/tv_nps"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableTop="@drawable/nps_icon"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:text="@string/nps"
+                        android:textColor="@color/color_dark_gray" />
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="135dp"
+                    android:layout_weight="1"
+                    android:animateLayoutChanges="true"
+                    android:animationCache="true"
+                    android:fadingEdge="horizontal"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="2dp"
+                    app:cardUseCompatPadding="true">
+
+                    <TextView
+                        android:id="@+id/tv_insurance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableTop="@drawable/insurance_icon"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:text="@string/insurance"
+                        android:textColor="@color/color_dark_gray" />
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="135dp"
+                    android:layout_weight="1"
+                    android:animateLayoutChanges="true"
+                    android:animationCache="true"
+                    android:fadingEdge="horizontal"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="2dp"
+                    app:cardUseCompatPadding="true">
+
+                    <TextView
+                        android:id="@+id/tv_fixed_deposit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableTop="@drawable/fixed_deposit_icon"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:text="@string/fixed_deposit"
+                        android:textColor="@color/color_dark_gray" />
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="135dp"
+                    android:layout_weight="1"
+                    android:animateLayoutChanges="true"
+                    android:animationCache="true"
+                    android:fadingEdge="horizontal"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="2dp"
+                    app:cardUseCompatPadding="true">
+
+                    <TextView
+                        android:id="@+id/tv_bonds"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableTop="@drawable/bond_icon"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:text="@string/bonds"
+                        android:textColor="@color/color_dark_gray" />
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="135dp"
+                    android:layout_weight="1"
+                    android:animateLayoutChanges="true"
+                    android:animationCache="true"
+                    android:fadingEdge="horizontal"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="2dp"
+                    app:cardUseCompatPadding="true">
+
+                    <TextView
+                        android:id="@+id/tv_equity_trading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableTop="@drawable/trading_icon"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:text="@string/equity_trading"
+                        android:textColor="@color/color_dark_gray" />
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".insurance.TravelInsuranceActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/app_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_header2"
+            android:padding="6dp">
+
+            <include
+                layout="@layout/layout_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/app_header"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:autofillHints="@string/app_name"
+                android:importantForAutofill="no"
+                android:shadowColor="@color/color_dark_gray"
+                android:textColorHint="@color/colorAccent">
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ,()"
+                    android:drawablePadding="10dp"
+                    android:hint="Destination(s)"
+                    android:inputType="textPersonName"
+                    android:maxLength="30"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="0dp"
+                    android:textSize="15sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingStart="42dp"
+                    android:text="Trip Start Date"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingStart="42dp"
+                    android:text="Trip End Date"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/tv_tripSta"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_textview"
+                    android:drawableStart="@drawable/ic_calendar1"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/lato"
+                    android:gravity="center|left"
+                    android:hint="Trip Start Date"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="0dp"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_tripEnd"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_textview"
+                    android:drawableStart="@drawable/ic_calendar1"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/lato"
+                    android:gravity="center|left"
+                    android:hint="Trip End Date"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="0dp"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Add Traveller"
+                android:textColor="@color/colorAccent"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tv_family_member"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/background_textview"
+                android:drawablePadding="10dp"
+                android:gravity="center|left"
+                android:hint="Add Traveller"
+                android:maxLength="300"
+                android:paddingStart="10dp"
+                android:paddingEnd="6dp"
+                android:paddingBottom="5dp"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:fontFamily="@font/lato"
+        android:text="@string/submit"
+        android:textColor="@color/colorWhite"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mutual_funds.TransferFundsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/app_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_header2"
+            android:padding="6dp">
+
+            <include
+                layout="@layout/layout_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/app_header"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="@string/app_name"
+                android:background="@drawable/background_login_button"
+                android:importantForAutofill="no"
+                android:shadowColor="@color/colorAccent"
+                android:textColorHint="@color/colorAccent">
+
+                <AutoCompleteTextView
+                    android:id="@+id/ac_MFname"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@android:color/transparent"
+                    android:drawablePadding="10dp"
+                    android:hint="Mutual Fund Name"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="0dp"
+                    android:textSize="15sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:autofillHints="@string/app_name"
+                android:background="@drawable/background_login_button"
+                android:importantForAutofill="no"
+                android:shadowColor="@color/colorAccent"
+                android:textColorHint="@color/colorAccent">
+
+                <EditText
+                    android:id="@+id/et_Fnumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@android:color/transparent"
+                    android:drawablePadding="10dp"
+                    android:hint="Folio Number"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="0dp"
+                    android:textSize="15sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:autofillHints="@string/app_name"
+                android:background="@drawable/background_login_button"
+                android:importantForAutofill="no"
+                android:shadowColor="@color/colorAccent"
+                android:textColorHint="@color/colorAccent">
+
+                <EditText
+                    android:id="@+id/et_Pnumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@android:color/transparent"
+                    android:drawablePadding="10dp"
+                    android:hint="PAN Number:"
+                    android:inputType="text"
+                    android:maxLength="10"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="0dp"
+                    android:textSize="15sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:autofillHints="@string/app_name"
+                android:background="@drawable/background_login_button"
+                android:importantForAutofill="no"
+                android:shadowColor="@color/colorAccent"
+                android:textColorHint="@color/colorAccent">
+
+                <EditText
+                    android:id="@+id/et_Investor"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@android:color/transparent"
+                    android:drawablePadding="10dp"
+                    android:hint="Investor (1st Holder Only)"
+                    android:inputType="textPersonName"
+                    android:maxLength="50"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="0dp"
+                    android:textSize="15sp" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <Button
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/layout_Nominee"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/background_rectangle"
+        android:fontFamily="@font/alike_angular"
+        android:onClick="onSubmit"
+        android:text="@string/submit"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

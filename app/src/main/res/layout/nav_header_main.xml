@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    android:background="@drawable/nav_hader_backimages"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+    <!-- <ImageView
+         android:layout_width="275dp"
+         android:layout_height="100dp"
+         android:layout_alignParentEnd="true"
+         android:src="@drawable/background_nav_header"/>
+ -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E0FBB030"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="40dp"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <ImageView
+            android:id="@+id/imageView_user"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/nav_header_desc"
+            android:foregroundGravity="center"
+            android:scaleType="fitCenter"
+            android:src="@drawable/user_icon"
+            android:visibility="gone" />
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/imageView_profile_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:padding="0dp"
+            android:src="@drawable/user_icon"
+            app:civ_border_color="#FF244125"
+            app:civ_border_width="2dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@id/imageView_profile_image"
+            android:layout_toRightOf="@+id/imageView_profile_image">
+
+            <TextView
+                android:id="@+id/tv_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato"
+                android:paddingLeft="10dp"
+                android:paddingRight="0dp"
+                android:text="@string/nav_header_title"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textViewEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_username"
+                android:fontFamily="@font/lato"
+                android:paddingLeft="10dp"
+                android:paddingRight="0dp"
+                android:text="@string/nav_header_subtitle"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

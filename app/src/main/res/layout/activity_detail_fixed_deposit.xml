@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_dMinAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="end"
+            android:text="MinAmount"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_iRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_dMinAmount"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/lato_black"
+            android:text="Interest Rate :"
+            android:textColor="@color/color_dark_gray"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_iTenure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_iRate"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/lato_black"
+            android:text="Tenure :"
+            android:textColor="@color/color_dark_gray"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_iName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_black"
+            android:text="Investor Name :"
+            android:textColor="@color/colorAccent"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_fdNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_iName"
+            android:fontFamily="@font/lato_black"
+            android:text="FD No.:"
+            android:textColor="@color/color_dark_gray"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_fdNumber"
+            android:layout_alignParentStart="true"
+            android:fontFamily="@font/lato_black"
+            android:text="Type :"
+            android:textColor="@color/color_dark_gray"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_mValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_iTenure"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/lato_black"
+            android:text="Maturity Value * :"
+            android:textColor="@color/color_dark_gray"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_iDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_type"
+            android:layout_alignParentStart="true"
+            android:fontFamily="@font/lato_black"
+            android:text="Investment Start Date  :"
+            android:textColor="@color/color_dark_gray"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_fvRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_iDate"
+            android:layout_alignParentStart="true"
+            android:fontFamily="@font/lato_black"
+            android:text="Fixed and Variable Rates :"
+            android:textColor="@color/color_dark_gray"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_fScheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_fvRate"
+            android:fontFamily="@font/lato_black"
+            android:text="Scheme Name :"
+            android:textColor="@color/color_dark_gray"
+            android:textSize="12sp" />
+
+
+        <TextView
+            android:id="@+id/tv_dMaturity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_mValue"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/lato_black"
+            android:text="Date Of Maturity :"
+            android:textColor="@color/color_dark_gray"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

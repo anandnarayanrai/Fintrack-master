@@ -1,0 +1,444 @@
+<resources>
+    <string name="app_name">Edge Fintrack</string>
+
+    <string name="enter_emai_Customer">Email / Customer code</string>
+    <string name="enter_password">Password</string>
+    <string name="enter_npassword">New Password</string>
+    <string name="enter_cpassword">Confirm Password</string>
+    <string name="bt_login">Login</string>
+    <string name="login_screen_app_logo">login Screen app logo</string>
+    <string name="signup_text">SignUp FREE Account set yourself ready to grow wealth in a smarter way!</string>
+    <string name="enter_name">Full Name (as per PAN)</string>
+    <string name="enter_email">Email ID</string>
+    <string name="enter_contact_no">Contact Number</string>
+    <string name="submit">Submit</string>
+    <string name="clear">Clear</string>
+    <string name="open_account">Not have? Open Account</string>
+    <string name="open_login">Have Account ? Login</string>
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="start">Get Started</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="nav_header_title">Fintrack</string>
+    <string name="nav_header_subtitle">fintrack@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings and Privacy</string>
+    <string name="action_ckyc">Update CKYC</string>
+
+    <string name="mutual_funds">Mutual Funds</string>
+    <string name="nps">NPS</string>
+    <string name="insurance">insurance</string>
+    <string name="fixed_deposit">Fixed Deposit</string>
+    <string name="bonds">Bonds</string>
+    <string name="equity_trading">Equity Trading</string>
+
+    <string name="field_required">Required Field</string>
+    <string name="email_field_required">Email is Required</string>
+    <string name="email_field_valid">Email is not valid</string>
+    <string name="email_AlreadyReg">Email Already Registerd</string>
+    <string name="mobile_AlreadyReg">Mobile Already Registerd</string>
+    <string name="password_field_required">Password is Required</string>
+    <string name="old_password_field_match">Password are not Match with old password</string>
+    <string name="password_field_match">Password are not Match</string>
+    <string name="name_field_required">Name is Required</string>
+    <string name="todo">TODO</string>
+    <string name="forgot_password">Forgot Password ?</string>
+
+
+    <string name="gender">Gender</string>
+    <string name="marital_status">Marital Status</string>
+    <string name="annual_income">Annual Income (In Indian Rupees - INR.)</string>
+    <string name="pan_number">PAN Number</string>
+    <string name="pan_number_required">PAN Number is Required</string>
+    <string name="re_pan_number">Re-Enter PAN Number</string>
+    <string name="date_of_birth">Date of Birth (DD/MM/YYYY)</string>
+    <string name="no_date_of_birth">Nominee Date of Birth (DD/MM/YYYY)</string>
+
+
+    <string name="country">Country</string>
+    <string name="state">State</string>
+    <string name="city">City/Location</string>
+    <string name="address1">Address Line 1</string>
+    <string name="address2">Address Line 2</string>
+    <string name="address3">Address Line 3</string>
+    <string name="pincode">Pincode</string>
+    <string name="telephone">Telephone</string>
+    <string name="mobile">Mobile</string>
+    <string name="email">Email</string>
+
+
+    <string name="investor_name">Investor Name</string>
+    <string name="nominee_name">Nominee Name</string>
+    <string name="parent_guardian">Name of Parent / Guardian</string>
+    <string name="relationship">Your relationship with the Nominee:</string>
+
+    <string name="Internet_not_found">Internet connection not found.</string>
+    <string name="went_wrong">We are sorry, Something went wrong.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+
+    <string name="privacy_term">
+     "<![CDATA[I/We accept the"
+     "<a href="http://fintrackindia.com/term-condition.html" style="color:gray"/> Terms &amp; Conditions </a> and"
+     "<a href="http://fintrackindia.com/privacy.html" style="color:gray"/> Privacy Policy </a>"]]>
+    </string>
+
+    <string-array name="item_list">
+        <item>Item1</item>
+        <item>Item2</item>
+        <item>Item3</item>
+        <item>Item4</item>
+        <item>Item5</item>
+    </string-array>
+
+    <string-array name="application_type_list">
+        <item>Select</item>
+        <item>New</item>
+        <item>Update</item>
+    </string-array>
+
+    <string-array name="bankaccount_type_list">
+        <item>Select</item>
+        <item>Saving Account</item>
+        <item>Current Account</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="bankaccount_holding_list">
+        <item>Select</item>
+        <item>Single Account</item>
+        <item>Joint Account</item>
+    </string-array>
+
+    <string-array name="account_type_list">
+        <item>Select</item>
+        <item>Normal</item>
+        <item>Small</item>
+        <item>Simplified</item>
+        <item>OTP Based-EKYC</item>
+    </string-array>
+
+    <string-array name="prefix_list">
+        <item>Select</item>
+        <item>Mr.</item>
+        <item>Mrs.</item>
+        <item>Mis.</item>
+    </string-array>
+
+    <string-array name="code_list">
+        <item>All</item>
+        <item>Mutual Fund</item>
+        <item>Equity</item>
+        <item>Commodity</item>
+        <item>PMS</item>
+    </string-array>
+
+    <string-array name="gender_list">
+        <item>Select</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Transgender</item>
+    </string-array>
+
+    <string-array name="deposit_list">
+        <item>Select</item>
+        <item>EPF</item>
+        <item>PPF</item>
+        <item>DEBENTURE</item>
+        <item>NSC</item>
+        <item>KVP</item>
+        <item>BANK DEPOSIT</item>
+        <item>COMPANY DEPOSIT</item>
+        <item>RD</item>
+    </string-array>
+
+    <string-array name="maritals_tatus_list">
+        <item>Select</item>
+        <item>Married</item>
+        <item>UnMarried</item>
+    </string-array>
+
+    <string-array name="citizenship_list">
+        <item>Select</item>
+        <item>Indian</item>
+        <item>OtherCountry</item>
+    </string-array>
+
+    <string-array name="residential_status_list">
+        <item>Select</item>
+        <item>Resident Individual</item>
+        <item>Non Resident Indian</item>
+        <item>Foreign National</item>
+        <item>Person of Indian Origin</item>
+    </string-array>
+
+    <string-array name="annual_income_list">
+        <item>Upto 3 Lacs</item>
+        <item>3 to 5 Lacs</item>
+        <item>5 to 7 Lacs</item>
+        <item>7 to 10 Lacs</item>
+        <item>10 to 15 Lacs</item>
+        <item>15 Lacs+</item>
+    </string-array>
+
+    <string-array name="policy_type_list">
+        <item>Structure &amp; Contents</item>
+        <item>Structure</item>
+        <item>Contents</item>
+    </string-array>
+    <string-array name="total_value_list">
+        <item>1,00,000</item>
+        <item>2,00,000</item>
+        <item>3,00,000</item>
+        <item>4,00,000</item>
+        <item>5,00,000</item>
+        <item>6,00,000</item>
+        <item>7,00,000</item>
+        <item>8,00,000</item>
+        <item>9,00,000</item>
+        <item>10,00,000</item>
+        <item>15,00,000</item>
+        <item>20,00,000</item>
+        <item>25,00,000</item>
+        <item>30,00,000</item>
+    </string-array>
+
+    <string-array name="jewellery_value_list">
+        <item>0</item>
+        <item>25,000</item>
+        <item>50,000</item>
+        <item>75,000</item>
+        <item>1,00,000</item>
+        <item>1,25,000</item>
+        <item>1,50,000</item>
+        <item>1,75,000</item>
+        <item>2,00,000</item>
+        <item>2,50,000</item>
+        <item>3,00,000</item>
+        <item>3,50,000</item>
+        <item>4,00,000</item>
+        <item>5,00,000</item>
+    </string-array>
+
+
+    <string-array name="occupation_type_list">
+        <item>Select</item>
+        <item>Business</item>
+        <item>Others - Professional</item>
+        <item>Others - Self Employed</item>
+        <item>Others - Retired</item>
+        <item>Others - Housewife</item>
+        <item>Others - Student</item>
+        <item>Service - Public Sector</item>
+        <item>Service - Private Sector</item>
+        <item>Service - Government Sector</item>
+        <item>Not Categorised</item>
+    </string-array>
+
+    <string-array name="address_type_list">
+        <item>Select</item>
+        <item>Residential/Business</item>
+        <item>Residential</item>
+        <item>Business</item>
+        <item>Registered Office</item>
+        <item>Unspecified</item>
+    </string-array>
+
+    <string-array name="related_person_list">
+        <item>Select</item>
+        <item>Related Person</item>
+        <item>Deletion of Related person</item>
+    </string-array>
+
+    <string-array name="country_list">
+        <item>Select</item>
+        <item>India</item>
+    </string-array>
+
+    <string-array name="related_type_list">
+        <item>Select</item>
+        <item>Guardian Of Minor</item>
+        <item>Assignee</item>
+        <item>Authorized Representative</item>
+    </string-array>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+
+    <!-- Example settings for Data & Sync -->
+
+    <!-- Example settings for Notifications -->
+
+
+    <!-- strings for dialog -->
+    <string name="string_permission_help">Help</string>
+    <string name="string_permission_help_text">The permission is missing.\n\nTo grant this permission click on Settings, then Permissions and turn the permission on.\n\nThen click back twice to return to the app</string>
+    <string name="string_permission_quit">Exit App</string>
+
+    <!--Bank Name-->
+
+    <string-array name="Bankname">
+        <item value="-1">Select</item>
+        <item value="SBI">State Bank of India</item>
+        <item value="HDFC">HDFC Bank</item>
+        <item value="ICICI">ICICI Bank</item>
+        <item value="AXIS">Axis Bank</item>
+        <item value="PNB">Punjab National Bank</item>
+        <item value="NKMB">Kotak Bank</item>
+        <item value="ANDB">Andhra Bank</item>
+        <item value="BBK">Bank of Bahrain and Kuwait</item>
+        <item value="BHARAT">Bharat Bank</item>
+        <item value="BOB">Bank of Baroda</item>
+        <item value="BOI">Bank of India</item>
+        <item value="BOM">Bank of Maharashtra</item>
+        <item value="ALH">Allahabad Bank</item>
+        <item value="CANARA">Canara Bank</item>
+        <item value="CSB">Catholic Syrian Bank</item>
+        <item value="CBI">Central Bank of India</item>
+        <item value="CITIUB">City Union Bank</item>
+        <item value="CORP">Corporation Bank</item>
+        <item value="COSMOS">Cosmos Bank</item>
+        <item value="DEUTS">Deutsche Bank</item>
+        <item value="FDEB">Federal Bank</item>
+        <item value="DCB">DCB Bank Ltd.</item>
+        <item value="DENA">Dena Bank</item>
+        <item value="GPPB">Gopinath Patil Parsik Janata Sahakari Bank Ltd.</item>
+        <item value="IDBI">IDBI Bank</item>
+        <item value="IDFC">IDFC Bank Ltd.</item>
+        <item value="INDB">Indian Bank</item>
+        <item value="IOB">Indian Overseas Bank</item>
+        <item value="INDS">IndusInd Bank</item>
+        <item value="ING">ING Vysya Bank</item>
+        <item value="JKB">Jammu and Kashmir Bank</item>
+        <item value="JSB">Janata Sahakari Bank</item>
+        <item value="KTKB">Karnataka Bank</item>
+        <item value="KVB">Karur Vysya Bank</item>
+        <item value="LVB">Lakhsmi Vilas Bank</item>
+        <item value="OBPRF">Oriental Bank of Commerce</item>
+        <item value="PSB">Punjab &amp; Sind Bank</item>
+        <item value="RATN">RBL Bank</item>
+        <item value="SVB">Shamrao Vithal Bank</item>
+        <item value="STB">Saraswat Co-operative Bank Ltd</item>
+        <item value="SIB">South Indian Bank</item>
+        <item value="SCB">Standard Chartered Bank</item>
+        <item value="SVC">SVC Cooperative Bank Ltd</item>
+        <item value="SYNBK">Syndicate Bank</item>
+        <item value="TNMB">Tamilnad Mercantile Bank</item>
+        <item value="UNI">Union Bank of India</item>
+        <item value="UBI">United Bank of India</item>
+        <item value="VJYA">Vijaya Bank</item>
+        <item value="YES">Yes Bank</item>
+        <item value="UCO">UCO Bank</item>
+    </string-array>
+
+    <string name="payment_mode">Payment Mode</string>
+    <string name="investment_start_date">Investment Start Date</string>
+    <string name="interest_rate">Rate of Interest (%)</string>
+    <string name="maturity_value">Maturity Value</string>
+    <string name="date_of_maturity">Date Of Maturity : </string>
+
+    <string name="fixed_and_variable_rates">Fixed And Variable Rates</string>
+    <string name="senior_citizen">Senior Citizen</string>
+    <string name="issuer">Issuer</string>
+    <string name="scheme_name">Scheme Name</string>
+    <string name="tenure">Tenure</string>
+    <string name="type">Type</string>
+    <string name="investment_amount_minimum_amount">Investment Minimum Amount</string>
+    <string name="full_name">Full Name</string>
+    <string name="date_of_birth2">Date Of Birth</string>
+    <string name="title">Title</string>
+    <string name="total_life_caver_desired">Total Life Caver Desired</string>
+    <string name="annual_income1">Annual Income</string>
+
+</resources>

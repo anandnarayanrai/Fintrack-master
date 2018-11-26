@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp">
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:src="@drawable/hdfc_life" />
+
+        <TextView
+            android:id="@+id/tv_dName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:fontFamily="@font/lato_black"
+            android:text="Name"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_dMinAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/lato_bold"
+            android:text="MinAmount"
+            android:textColor="@color/colorAccent"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_dMinAmount"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_toStartOf="@+id/bt_buy"
+            android:layout_toEndOf="@+id/iv_logo"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:fontFamily="@font/lato"
+                    android:text="1 Yr"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/tv_dRate1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato"
+                    android:text="dRate1"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:fontFamily="@font/lato"
+                    android:text="3 Yrs"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/tv_dRate3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:fontFamily="@font/lato"
+                    android:text="dRate1"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:fontFamily="@font/lato"
+                    android:text="5 Yrs"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/tv_dRate5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:fontFamily="@font/lato"
+                    android:text="dRate1"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:fontFamily="@font/lato"
+                    android:text="Sr. Citizen"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/tv_dSrC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:fontFamily="@font/lato"
+                    android:text="dRate1"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="11sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bt_buy"
+            android:layout_width="70dp"
+            android:layout_height="25dp"
+            android:layout_below="@+id/tv_dMinAmount"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/background_button"
+            android:fontFamily="@font/lato_black"
+            android:text="Buy Now"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="10sp" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image1"
+    tools:context=".signup.SignUp4Activity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhiteTransparent"
+        android:isScrollContainer="false">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/lay_back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/todo"
+                android:scaleType="fitXY"
+                android:src="@drawable/background_login_image3" />
+
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="110dp"
+                android:layout_above="@+id/ui_container"
+                android:layout_centerHorizontal="true"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/login_screen_app_logo"
+                android:src="@drawable/finlogo" />
+
+            <RelativeLayout
+                android:id="@+id/ui_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lay_back"
+                android:focusableInTouchMode="true"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:paddingBottom="20dp">
+
+
+                <LinearLayout
+                    android:id="@+id/layout_resid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Select The Bank Name :"
+                        android:textColor="@color/colorAccent" />
+
+                    <Spinner
+                        android:id="@+id/spinner_ResidentialStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:background="@drawable/background_rectangle_edittext"
+                        android:entries="@array/application_type_list"
+                        android:popupBackground="@color/colorAccent"
+                        android:spinnerMode="dialog" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/layout_gender_ma"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_resid"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Account Type:"
+                            android:textColor="@color/colorAccent" />
+
+                        <Spinner
+                            android:id="@+id/spinner_gender"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/background_rectangle_edittext"
+                            android:entries="@array/gender_list"
+                            android:popupBackground="@color/colorAccent"
+                            android:spinnerMode="dialog" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Mode Of Holding"
+                            android:textColor="@color/colorAccent" />
+
+                        <Spinner
+                            android:id="@+id/spinner_marital"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/background_rectangle_edittext"
+                            android:entries="@array/maritals_tatus_list"
+                            android:popupBackground="@color/colorAccent"
+                            android:spinnerMode="dialog" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/layout_accountnum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_gender_ma"
+                    android:autofillHints="@string/app_name"
+                    android:shadowColor="@color/colorAccent"
+                    android:textColorHint="@color/colorAccent">
+
+                    <EditText
+                        android:id="@+id/et_account"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+                        android:hint="Account Number"
+                        android:importantForAutofill="noExcludeDescendants"
+                        android:inputType="textPersonName"
+                        android:maxLength="30"
+                        android:textSize="15sp" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_accountnum"
+                    android:autofillHints="@string/app_name"
+                    android:shadowColor="@color/colorAccent"
+                    android:textColorHint="@color/colorAccent">
+
+                    <EditText
+                        android:id="@+id/et_ifsc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+                        android:drawablePadding="10dp"
+                        android:hint="IFSC code"
+                        android:importantForAutofill="noExcludeDescendants"
+                        android:inputType="textPersonName"
+                        android:maxLength="30"
+                        android:textSize="15sp" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/layout_bankcity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_accountnum"
+                    android:autofillHints="@string/app_name"
+                    android:shadowColor="@color/colorAccent"
+                    android:textColorHint="@color/colorAccent">
+
+                    <EditText
+                        android:id="@+id/et_bankcity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+                        android:drawablePadding="10dp"
+                        android:hint="IFSC code"
+                        android:importantForAutofill="noExcludeDescendants"
+                        android:inputType="textPersonName"
+                        android:maxLength="30"
+                        android:textSize="15sp" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_bankcity"
+                    android:autofillHints="@string/app_name"
+                    android:shadowColor="@color/colorAccent"
+                    android:textColorHint="@color/colorAccent">
+
+                    <EditText
+                        android:id="@+id/et_bankbranch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+                        android:drawablePadding="10dp"
+                        android:hint="Bank Branch"
+                        android:importantForAutofill="noExcludeDescendants"
+                        android:inputType="textPersonName"
+                        android:maxLength="30"
+                        android:textSize="15sp" />
+                </android.support.design.widget.TextInputLayout>
+
+            </RelativeLayout>
+
+
+            <Button
+                android:id="@+id/bt_signup"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ui_container"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/background_rectangle"
+                android:fontFamily="@font/alike_angular"
+                android:text="@string/submit"
+                android:textColor="@color/colorPrimary" />
+
+        </RelativeLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

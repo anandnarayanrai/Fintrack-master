@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_back_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/nav_header_desc"
+            android:scaleType="fitXY" />
+
+        <!-- <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="200dp"
+             android:background="#ADC0C0C0" />-->
+
+        <RelativeLayout
+            android:id="@+id/app_header"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="10dp">
+
+            <ImageView
+                android:id="@+id/iv_menu_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/app_name"
+                app:srcCompat="@drawable/ic_back" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutuser"
+            android:layout_width="match_parent"
+            android:layout_marginTop="25dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/app_header">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:animateLayoutChanges="true"
+                    android:animationCache="true"
+                    android:fadingEdge="horizontal"
+                    app:cardBackgroundColor="@color/colorWhite"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="2dp"
+                    app:cardUseCompatPadding="true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_Pusername"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="50dp"
+                            android:fontFamily="@font/lato"
+                            android:padding="5dp"
+                            android:text="Inverter Name"
+                            android:textColor="@color/color_dark_gray"
+                            android:textSize="22sp" />
+
+                        <TextView
+                            android:id="@+id/tv_Pusereview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_Pusername"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/lato"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="eKYC COMPLETED"
+                            android:textColor="@color/level_0"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+            </RelativeLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:background="@drawable/login_circle"
+                android:padding="0dp"
+                android:src="@drawable/user_icon"
+                app:civ_border_color="#FF244125"
+                app:civ_border_width="2dp" />
+
+            <ImageView
+                android:id="@+id/imageView_user"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:adjustViewBounds="true"
+                android:background="@drawable/login_circle"
+                android:contentDescription="@string/nav_header_desc"
+                android:foregroundGravity="center"
+                android:padding="7dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/user_icon"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/layoutuser"
+            android:fillViewport="true"
+            android:isScrollContainer="false"
+            android:overScrollMode="ifContentScrolls"
+            android:scrollIndicators="none"
+            app:layout_constraintCircleRadius="@dimen/fab_margin">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cv_personalInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:animateLayoutChanges="true"
+                    android:animationCache="true"
+                    android:fadingEdge="horizontal"
+                    app:cardBackgroundColor="@color/colorWhiteTransparent"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="2dp"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato"
+                            android:text="Personal Information"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/tv_emailid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/lato"
+                            android:text="Email Address:"
+                            android:textColor="@color/color_dark_gray" />
+
+                        <TextView
+                            android:id="@+id/tv_mobile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/lato"
+                            android:text="Mobile Number:"
+                            android:textColor="@color/color_dark_gray" />
+
+                        <TextView
+                            android:id="@+id/tv_fathername"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/lato"
+                            android:text="Father Name:"
+                            android:textColor="@color/color_dark_gray" />
+
+                        <TextView
+                            android:id="@+id/tv_gender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:visibility="gone"
+                            android:fontFamily="@font/lato"
+                            android:text="gender:"
+                            android:textColor="@color/color_dark_gray" />
+
+                        <TextView
+                            android:id="@+id/tv_Puserekvc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/lato"
+                            android:text="PAN:- ASFWS778 "
+                            android:textColor="@color/color_dark_gray"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/lato"
+                            android:text="Aadhar No.:- 123456789123"
+                            android:textColor="@color/color_dark_gray"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cv_personalInfo"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="10dp"
+                    android:animateLayoutChanges="true"
+                    android:animationCache="true"
+                    android:fadingEdge="horizontal"
+                    app:cardBackgroundColor="@color/colorWhiteTransparent"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="2dp"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato"
+                            android:text="Primary Bank Information"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="20sp" />
+
+
+                        <TextView
+                            android:id="@+id/tv_bank_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/lato"
+                            android:text="Name of the Bank:"
+                            android:textColor="@color/color_dark_gray" />
+
+                        <TextView
+                            android:id="@+id/tv_bank_account"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/lato"
+                            android:text="Account Number:"
+                            android:textColor="@color/color_dark_gray" />
+
+                        <TextView
+                            android:id="@+id/tv_bank_ifsc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/lato"
+                            android:text="IFSC Code:"
+                            android:textColor="@color/color_dark_gray" />
+
+                        <TextView
+                            android:id="@+id/tv_bank_loder_name1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/lato"
+                            android:text="1st Account Holder Name:"
+                            android:textColor="@color/color_dark_gray" />
+
+                        <TextView
+                            android:id="@+id/tv_bank_loder_name2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/lato"
+                            android:text="2nd Account Holder Name:"
+                            android:textColor="@color/color_dark_gray" />
+
+                        <TextView
+                            android:id="@+id/tv_bank_account_ty"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/lato"
+                            android:text="Account Type:"
+                            android:textColor="@color/color_dark_gray" />
+
+                        <TextView
+                            android:id="@+id/tv_bank_holding"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/lato"
+                            android:text="Mode of Holding:"
+                            android:textColor="@color/color_dark_gray" />
+
+
+                        <TextView
+                            android:id="@+id/tv_bank_add"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/lato"
+                            android:text="Branch Address:"
+                            android:textColor="@color/color_dark_gray" />
+
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cardview"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="10dp"
+                    android:animateLayoutChanges="true"
+                    android:animationCache="true"
+                    android:fadingEdge="horizontal"
+                    app:cardBackgroundColor="@color/colorWhiteTransparent"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="2dp"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato"
+                            android:text="Address Information"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="20sp" />
+
+
+                        <TextView
+                            android:id="@+id/tv_address1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/lato"
+                            android:text="Address Line 1:"
+                            android:textColor="@color/color_dark_gray" />
+
+                        <TextView
+                            android:id="@+id/tv_address2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/lato"
+                            android:text="Address Line 2:"
+                            android:textColor="@color/color_dark_gray" />
+
+
+                        <TextView
+                            android:id="@+id/tv_city"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/lato"
+                            android:text="City/Location:"
+                            android:textColor="@color/color_dark_gray" />
+
+                        <TextView
+                            android:id="@+id/tv_country"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/lato"
+                            android:text="Country:"
+                            android:textColor="@color/color_dark_gray" />
+
+                        <TextView
+                            android:id="@+id/tv_pincode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/lato"
+                            android:text="Pincode:"
+                            android:textColor="@color/color_dark_gray" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

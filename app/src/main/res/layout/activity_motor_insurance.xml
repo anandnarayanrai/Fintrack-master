@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".insurance.MotorInsuranceActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/app_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_header2"
+            android:padding="6dp">
+
+            <include
+                layout="@layout/layout_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp" />
+        </RelativeLayout>
+
+        <!-- <ScrollView
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_below="@+id/app_header"
+             android:fillViewport="false"
+             android:focusableInTouchMode="true"
+             android:isScrollContainer="true">-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/app_header"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:autofillHints="@string/app_name"
+                android:importantForAutofill="no"
+                android:shadowColor="@color/colorAccent"
+                android:textColorHint="@color/colorAccent">
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ,()"
+                    android:drawablePadding="10dp"
+                    android:hint="Registration Area Code"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName"
+                    android:maxLength="30"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="0dp"
+                    android:textSize="15sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="5dp"
+                android:autofillHints="@string/app_name"
+                android:importantForAutofill="no"
+                android:shadowColor="@color/colorAccent"
+                android:textColorHint="@color/colorAccent">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
+                    android:drawablePadding="10dp"
+                    android:hint="Registration Number"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName"
+                    android:maxLength="30"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="0dp"
+                    android:textSize="15sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="1dp"
+                android:text="Registration year"
+                android:textColor="@color/colorAccent" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/spinner_selector"
+                android:drawablePadding="10dp"
+                android:entries="@array/annual_income_list"
+                android:hint="Annual Income"
+                android:inputType="number"
+                android:maxLength="30"
+                android:spinnerMode="dialog"
+                android:textSize="15sp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="5dp"
+                android:autofillHints="@string/app_name"
+                android:importantForAutofill="no"
+                android:shadowColor="@color/colorAccent"
+                android:textColorHint="@color/colorAccent">
+
+                <EditText
+                    android:id="@+id/et_customername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
+                    android:drawablePadding="10dp"
+                    android:hint="Make Model"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName"
+                    android:maxLength="30"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="0dp"
+                    android:textSize="15sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="5dp"
+                android:autofillHints="@string/app_name"
+                android:importantForAutofill="no"
+                android:shadowColor="@color/colorAccent"
+                android:textColorHint="@color/colorAccent">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
+                    android:drawablePadding="10dp"
+                    android:hint="Fuel Type"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName"
+                    android:maxLength="30"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="0dp"
+                    android:textSize="15sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="5dp"
+                android:autofillHints="@string/app_name"
+                android:importantForAutofill="no"
+                android:shadowColor="@color/colorAccent"
+                android:textColorHint="@color/colorAccent">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
+                    android:drawablePadding="10dp"
+                    android:hint="Car Variant"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPersonName"
+                    android:maxLength="30"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="0dp"
+                    android:textSize="15sp" />
+            </android.support.design.widget.TextInputLayout>
+
+
+        </LinearLayout>
+        <!-- </ScrollView>-->
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:fontFamily="@font/lato"
+        android:text="@string/submit"
+        android:textColor="@color/colorWhite"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

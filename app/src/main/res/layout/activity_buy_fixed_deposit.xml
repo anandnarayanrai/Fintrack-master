@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fixed_deposit.BuyFixedDepositActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/app_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_header2"
+            android:padding="6dp">
+
+            <include
+                layout="@layout/layout_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/app_header"
+            android:fillViewport="true"
+            android:isScrollContainer="false"
+            android:scrollIndicators="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="60dp"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:paddingBottom="10dp">
+
+                <LinearLayout
+                    android:id="@+id/layout_Nominee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/investor_name"
+                        android:textColor="@color/colorAccent" />
+
+                    <Spinner
+                        android:id="@+id/spinner_investor_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@drawable/spinner_selector"
+                        android:popupBackground="@color/colorAccent"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/issuer"
+                        android:textColor="@color/colorAccent" />
+
+                    <TextView
+                        android:id="@+id/spinner_issuer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/color_gray0"
+                        android:fontFamily="@font/lato"
+                        android:padding="5dp"
+                        android:popupBackground="@color/colorAccent"
+                        android:spinnerMode="dialog"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/scheme_name"
+                        android:textColor="@color/colorAccent" />
+
+                    <Spinner
+                        android:id="@+id/spinner_schemename"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:background="@drawable/spinner_selector"
+                        android:popupBackground="@color/colorAccent"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:id="@+id/tv_fv_rate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/fixed_and_variable_rates"
+                        android:textColor="@color/colorAccent" />
+
+                    <Spinner
+                        android:id="@+id/spinner_fv_rate"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:background="@drawable/spinner_selector"
+                        android:popupBackground="@color/colorAccent"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/tenure"
+                        android:textColor="@color/colorAccent" />
+
+                    <Spinner
+                        android:id="@+id/spinner_tenure"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:background="@drawable/spinner_selector"
+                        android:popupBackground="@color/colorAccent"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/type"
+                        android:textColor="@color/colorAccent" />
+
+                    <Spinner
+                        android:id="@+id/spinner_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:background="@drawable/spinner_selector"
+                        android:popupBackground="@color/colorAccent"
+                        android:spinnerMode="dialog" />
+                    <!--  android:background="@android:drawable/btn_dropdown"-->
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/layout_tv_minimum_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:autofillHints="@string/app_name"
+                        android:hint="@string/investment_amount_minimum_amount"
+                        android:importantForAutofill="no"
+                        android:shadowColor="@color/colorAccent"
+                        android:textColorHint="@color/colorAccent">
+
+                        <EditText
+                            android:id="@+id/tv_minimum_amount"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/spinner_enabled"
+                            android:digits="0123456789."
+                            android:drawablePadding="10dp"
+                            android:inputType="number"
+                            android:maxLength="15"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="0dp"
+                            android:textSize="15sp" />
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <TextView
+                        android:id="@+id/et_n_date_of_birth"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_textview"
+                        android:drawableStart="@drawable/ic_calendar1"
+                        android:drawablePadding="10dp"
+                        android:gravity="center|left"
+                        android:hint="@string/investment_start_date"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:textSize="15sp" />
+
+
+                    <TextView
+                        android:id="@+id/tv_rate_of_inte"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_textview"
+                        android:drawablePadding="10dp"
+                        android:gravity="center|left"
+                        android:hint="@string/interest_rate"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="0dp"
+                        android:textSize="15sp" />
+
+
+                    <TextView
+                        android:id="@+id/tv_maturity_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_textview"
+                        android:drawablePadding="10dp"
+                        android:gravity="center|left"
+                        android:hint="@string/maturity_value"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="0dp"
+                        android:textSize="15sp" />
+
+
+                    <TextView
+                        android:id="@+id/tv_date_of_maturity"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_textview"
+                        android:drawableStart="@drawable/ic_calendar1"
+                        android:drawablePadding="10dp"
+                        android:gravity="center|left"
+                        android:hint="@string/date_of_maturity"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="0dp"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="1dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="@string/payment_mode"
+                                android:textColor="@color/colorAccent" />
+
+                            <Spinner
+                                android:id="@+id/spinner_pmode"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:background="@drawable/spinner_selector"
+                                android:popupBackground="@color/colorAccent"
+                                android:spinnerMode="dialog" />
+                        </LinearLayout>
+
+                        <!--  android:background="@android:drawable/btn_dropdown"-->
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="1dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_weight="1"
+                            android:autofillHints="@string/app_name"
+                            android:importantForAutofill="no"
+                            android:shadowColor="@color/colorAccent"
+                            android:textColorHint="@color/colorAccent">
+
+                            <EditText
+                                android:id="@+id/ed_payment"
+                                android:layout_width="match_parent"
+                                android:layout_height="31dp"
+                                android:background="@drawable/spinner_enabled"
+                                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ,()0123456789"
+                                android:drawablePadding="10dp"
+                                android:hint=""
+                                android:inputType="number"
+                                android:maxLength="30"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="0dp"
+                                android:textSize="15sp" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/senior_citizen"
+                        android:textColor="@color/colorAccent" />
+
+                    <Spinner
+                        android:id="@+id/spinner_SCi"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:background="@drawable/spinner_selector"
+                        android:popupBackground="@color/colorAccent"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/nominee_name"
+                        android:textColor="@color/colorAccent" />
+
+                    <Spinner
+                        android:id="@+id/spinner_NList"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:background="@drawable/spinner_selector"
+                        android:popupBackground="@color/colorAccent"
+                        android:spinnerMode="dialog" />
+
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/bt_submit"
+                    android:layout_width="220dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/layout_Nominee"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/background_rectangle"
+                    android:fontFamily="@font/alike_angular"
+                    android:onClick="onSubmit"
+                    android:text="@string/submit"
+                    android:textColor="@color/color_dark_gray" />
+
+            </RelativeLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

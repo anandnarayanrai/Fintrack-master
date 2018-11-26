@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".portfolio.mfund.AddMFundActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="15dp">
+
+        <TextView
+            android:id="@+id/tv_accountHolder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Account Holder Name"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/layout_stackname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_accountHolder"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:autofillHints="@string/app_name"
+            android:importantForAutofill="no"
+            android:shadowColor="@color/colorAccent"
+            android:textColorHint="@color/color_dark_gray">
+
+            <AutoCompleteTextView
+                android:id="@+id/act_scheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoLink="none"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ,0123456789-"
+                android:drawablePadding="10dp"
+                android:hint="Search by Scheme Name"
+                android:imeOptions="actionNext"
+                android:inputType="textNoSuggestions|textPersonName"
+                android:maxLength="50"
+                android:paddingEnd="0dp"
+                android:textSize="15sp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/layout_invdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_stackname"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:autofillHints="@string/app_name"
+            android:importantForAutofill="no"
+            android:shadowColor="@color/colorAccent"
+            android:textColorHint="@color/color_dark_gray">
+
+            <EditText
+                android:id="@+id/et_invdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="abcdefghijklmnopqrstuvwxyz0123456789-"
+                android:drawableEnd="@drawable/ic_calendar1"
+                android:drawablePadding="10dp"
+                android:hint="Investment Date"
+                android:importantForAutofill="noExcludeDescendants"
+                android:inputType="textNoSuggestions|textEmailAddress|date"
+                android:maxLength="30"
+                android:textSize="15sp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/layout_folio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_invdate"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:autofillHints="@string/app_name"
+            android:importantForAutofill="no"
+            android:shadowColor="@color/colorAccent"
+            android:textColorHint="@color/color_dark_gray">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="0123456789"
+                android:drawablePadding="10dp"
+                android:hint="Folio Number"
+                android:importantForAutofill="noExcludeDescendants"
+                android:inputType="textNoSuggestions|numberDecimal"
+                android:maxLength="30"
+                android:textSize="15sp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/layout_nav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_folio"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:autofillHints="@string/app_name"
+            android:importantForAutofill="no"
+            android:shadowColor="@color/colorAccent"
+            android:textColorHint="@color/color_dark_gray">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="0123456789."
+                android:drawablePadding="10dp"
+                android:hint="NAV"
+                android:importantForAutofill="noExcludeDescendants"
+                android:inputType="number"
+                android:maxLength="10"
+                android:textSize="15sp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/layout_invquantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_nav"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:autofillHints="@string/app_name"
+            android:importantForAutofill="no"
+            android:shadowColor="@color/colorAccent"
+            android:textColorHint="@color/color_dark_gray">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="0123456789."
+                android:drawablePadding="10dp"
+                android:hint="Buy Quantity"
+                android:importantForAutofill="noExcludeDescendants"
+                android:inputType="number"
+                android:maxLength="10"
+                android:textSize="15sp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/bt_save"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_invquantity"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/background_login_button"
+            android:text="save" />
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_invquantity"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="25dp"
+            android:layout_toEndOf="@+id/bt_save"
+            android:background="@drawable/background_login_button"
+            android:text="Cancel" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

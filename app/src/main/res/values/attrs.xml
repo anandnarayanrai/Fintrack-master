@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MultiLevelListView">
+        <attr name="nestType">
+            <enum name="single" value="0" />
+            <enum name="multiple" value="1" />
+        </attr>
+
+        <attr name="alwaysExtended" format="boolean" />
+        <attr name="list" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="ExpandableLayout">
+        <attr name="el_headerLayout" format="reference" />
+        <attr name="el_contentLayout" format="reference" />
+        <attr name="el_duration" format="integer" />
+    </declare-styleable>
+</resources>
