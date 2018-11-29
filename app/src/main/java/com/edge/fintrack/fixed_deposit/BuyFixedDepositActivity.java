@@ -40,19 +40,19 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.edge.fintrack.Api_Class.METHOD_NAME_getInvestorNominee;
-import static com.edge.fintrack.Api_Class.METHOD_NAME_getScheme;
-import static com.edge.fintrack.Api_Class.METHOD_NAME_getTenureB;
-import static com.edge.fintrack.Api_Class.METHOD_NAME_getTenureTB;
-import static com.edge.fintrack.Api_Class.METHOD_NAME_getVRates;
-import static com.edge.fintrack.Api_Class.METHOD_NAME_postFixedDeposit;
-import static com.edge.fintrack.Api_Class.METHOD_NAME_updateDataBind;
-import static com.edge.fintrack.Api_Class.NAMESPACE;
-import static com.edge.fintrack.Api_Class.SOAP_ACTION;
-import static com.edge.fintrack.Api_Class.URL_InvestorNominee;
-import static com.edge.fintrack.Api_Class.URL_getFixed;
-import static com.edge.fintrack.Constant.ShowDilog;
-import static com.edge.fintrack.Constant.isInternetOn;
+import static com.edge.fintrack.utility.Api_Class.METHOD_NAME_getInvestorNominee;
+import static com.edge.fintrack.utility.Api_Class.METHOD_NAME_getScheme;
+import static com.edge.fintrack.utility.Api_Class.METHOD_NAME_getTenureB;
+import static com.edge.fintrack.utility.Api_Class.METHOD_NAME_getTenureTB;
+import static com.edge.fintrack.utility.Api_Class.METHOD_NAME_getVRates;
+import static com.edge.fintrack.utility.Api_Class.METHOD_NAME_postFixedDeposit;
+import static com.edge.fintrack.utility.Api_Class.METHOD_NAME_updateDataBind;
+import static com.edge.fintrack.utility.Api_Class.NAMESPACE;
+import static com.edge.fintrack.utility.Api_Class.SOAP_ACTION;
+import static com.edge.fintrack.utility.Api_Class.URL_InvestorNominee;
+import static com.edge.fintrack.utility.Api_Class.URL_getFixed;
+import static com.edge.fintrack.utility.Constant.ShowDilog;
+import static com.edge.fintrack.utility.Constant.isInternetOn;
 
 public class BuyFixedDepositActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener, View.OnClickListener {
     public final String TAG = "FixedDepositActivity";
@@ -310,8 +310,8 @@ public class BuyFixedDepositActivity extends AppCompatActivity implements Adapte
                     Intent intentUpdateProfile = new Intent(BuyFixedDepositActivity.this, UpdateProfileActivity.class);
                     intentUpdateProfile.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     intentUpdateProfile.putExtra("layout", "layout_nominee");
-                    startActivity(intentUpdateProfile);
-                    overridePendingTransition(R.anim.anim_slide_in_left, R.anim.anim_slide_out_left);
+                    //startActivity(intentUpdateProfile);
+                    //overridePendingTransition(R.anim.anim_slide_in_left, R.anim.anim_slide_out_left);
                 } else {
                     Nominee_Name = parent.getItemAtPosition(position).toString();
                     Nominee_Relationship = nominee_rel.get(parent.getItemAtPosition(position).toString());
@@ -641,7 +641,6 @@ public class BuyFixedDepositActivity extends AppCompatActivity implements Adapte
     }
 
     private class getVRates extends AsyncTask<Void, Void, Void> {
-
 
         @Override
         protected Void doInBackground(Void... params) {

@@ -23,12 +23,12 @@ import org.ksoap2.transport.HttpTransportSE;
 
 import java.util.Objects;
 
-import static com.edge.fintrack.Api_Class.METHOD_NAME_CValidateOTP;
-import static com.edge.fintrack.Api_Class.METHOD_NAME_RegenerateOTPClient;
-import static com.edge.fintrack.Api_Class.NAMESPACE;
-import static com.edge.fintrack.Api_Class.SOAP_ACTION;
-import static com.edge.fintrack.Api_Class.URL_ValidateOTP;
-import static com.edge.fintrack.Constant.ShowDilog;
+import static com.edge.fintrack.utility.Api_Class.METHOD_NAME_CValidateOTP;
+import static com.edge.fintrack.utility.Api_Class.METHOD_NAME_RegenerateOTPClient;
+import static com.edge.fintrack.utility.Api_Class.NAMESPACE;
+import static com.edge.fintrack.utility.Api_Class.SOAP_ACTION;
+import static com.edge.fintrack.utility.Api_Class.URL_ValidateOTP;
+import static com.edge.fintrack.utility.Constant.ShowDilog;
 
 public class SignUp3Activity extends AppCompatActivity {
     public final String TAG = SignUp3Activity.class.getSimpleName();

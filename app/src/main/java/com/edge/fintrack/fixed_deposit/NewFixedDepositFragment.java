@@ -34,11 +34,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-import static com.edge.fintrack.Api_Class.METHOD_NAME_getFixed;
-import static com.edge.fintrack.Api_Class.NAMESPACE;
-import static com.edge.fintrack.Api_Class.SOAP_ACTION;
-import static com.edge.fintrack.Api_Class.URL_getFixed;
-import static com.edge.fintrack.Constant.ShowDilog;
+import static com.edge.fintrack.utility.Api_Class.METHOD_NAME_getFixed;
+import static com.edge.fintrack.utility.Api_Class.NAMESPACE;
+import static com.edge.fintrack.utility.Api_Class.SOAP_ACTION;
+import static com.edge.fintrack.utility.Api_Class.URL_getFixed;
+import static com.edge.fintrack.utility.Constant.ShowDilog;
 
 /**
  * A simple {@link Fragment} subclass.

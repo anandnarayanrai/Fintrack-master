@@ -44,24 +44,24 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
-import static com.edge.fintrack.Api_Class.METHOD_NAME_getCity;
-import static com.edge.fintrack.Api_Class.METHOD_NAME_getInvestorBank;
-import static com.edge.fintrack.Api_Class.METHOD_NAME_getInvestorCommunication;
-import static com.edge.fintrack.Api_Class.METHOD_NAME_getInvestorNominee;
-import static com.edge.fintrack.Api_Class.METHOD_NAME_getInvestorProfile;
-import static com.edge.fintrack.Api_Class.METHOD_NAME_getState;
-import static com.edge.fintrack.Api_Class.METHOD_NAME_updateInvestorBank;
-import static com.edge.fintrack.Api_Class.METHOD_NAME_updateInvestorCommunication;
-import static com.edge.fintrack.Api_Class.METHOD_NAME_updateInvestorNominee;
-import static com.edge.fintrack.Api_Class.NAMESPACE;
-import static com.edge.fintrack.Api_Class.SOAP_ACTION;
-import static com.edge.fintrack.Api_Class.URL_InvestorNominee;
-import static com.edge.fintrack.Api_Class.URL_InvestorProfileCommunication;
-import static com.edge.fintrack.Api_Class.URL_InvestorViewProfile;
-import static com.edge.fintrack.Api_Class.URL_getInvestorBankDetail;
-import static com.edge.fintrack.Api_Class.URL_state_and_city;
-import static com.edge.fintrack.Constant.ShowDilog;
-import static com.edge.fintrack.Constant.isInternetOn;
+import static com.edge.fintrack.utility.Api_Class.METHOD_NAME_getCity;
+import static com.edge.fintrack.utility.Api_Class.METHOD_NAME_getInvestorBank;
+import static com.edge.fintrack.utility.Api_Class.METHOD_NAME_getInvestorCommunication;
+import static com.edge.fintrack.utility.Api_Class.METHOD_NAME_getInvestorNominee;
+import static com.edge.fintrack.utility.Api_Class.METHOD_NAME_getInvestorProfile;
+import static com.edge.fintrack.utility.Api_Class.METHOD_NAME_getState;
+import static com.edge.fintrack.utility.Api_Class.METHOD_NAME_updateInvestorBank;
+import static com.edge.fintrack.utility.Api_Class.METHOD_NAME_updateInvestorCommunication;
+import static com.edge.fintrack.utility.Api_Class.METHOD_NAME_updateInvestorNominee;
+import static com.edge.fintrack.utility.Api_Class.NAMESPACE;
+import static com.edge.fintrack.utility.Api_Class.SOAP_ACTION;
+import static com.edge.fintrack.utility.Api_Class.URL_InvestorNominee;
+import static com.edge.fintrack.utility.Api_Class.URL_InvestorProfileCommunication;
+import static com.edge.fintrack.utility.Api_Class.URL_InvestorViewProfile;
+import static com.edge.fintrack.utility.Api_Class.URL_getInvestorBankDetail;
+import static com.edge.fintrack.utility.Api_Class.URL_state_and_city;
+import static com.edge.fintrack.utility.Constant.ShowDilog;
+import static com.edge.fintrack.utility.Constant.isInternetOn;
 
 public class UpdateProfileActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 

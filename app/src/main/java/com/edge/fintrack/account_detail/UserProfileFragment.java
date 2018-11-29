@@ -18,7 +18,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.edge.fintrack.Constant;
+import com.edge.fintrack.utility.Constant;
 import com.edge.fintrack.R;
 import com.edge.fintrack.SessionManager;
 

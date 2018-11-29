@@ -30,14 +30,14 @@ import java.util.HashMap;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-import static com.edge.fintrack.Api_Class.METHOD_NAME_getInvestorProfile;
-import static com.edge.fintrack.Api_Class.METHOD_NAME_getInvestorProfilePhoto;
-import static com.edge.fintrack.Api_Class.NAMESPACE;
-import static com.edge.fintrack.Api_Class.SOAP_ACTION;
-import static com.edge.fintrack.Api_Class.URL_InvestorProfilePhoto;
-import static com.edge.fintrack.Api_Class.URL_InvestorViewProfile;
-import static com.edge.fintrack.Constant.ShowDilog;
-import static com.edge.fintrack.Constant.isInternetOn;
+import static com.edge.fintrack.utility.Api_Class.METHOD_NAME_getInvestorProfile;
+import static com.edge.fintrack.utility.Api_Class.METHOD_NAME_getInvestorProfilePhoto;
+import static com.edge.fintrack.utility.Api_Class.NAMESPACE;
+import static com.edge.fintrack.utility.Api_Class.SOAP_ACTION;
+import static com.edge.fintrack.utility.Api_Class.URL_InvestorProfilePhoto;
+import static com.edge.fintrack.utility.Api_Class.URL_InvestorViewProfile;
+import static com.edge.fintrack.utility.Constant.ShowDilog;
+import static com.edge.fintrack.utility.Constant.isInternetOn;
 
 public class ProfileViewActivity extends AppCompatActivity {
     public final String TAG = "ProfileViewActivity";

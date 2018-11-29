@@ -12,7 +12,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-import com.edge.fintrack.NumberTextWatcherForThousand;
+import com.edge.fintrack.utility.NumberTextWatcherForThousand;
 import com.edge.fintrack.R;
 import com.edge.fintrack.SessionManager;
 
@@ -29,13 +29,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.edge.fintrack.Api_Class.METHOD_NAME_getCity;
-import static com.edge.fintrack.Api_Class.METHOD_NAME_getState;
-import static com.edge.fintrack.Api_Class.NAMESPACE;
-import static com.edge.fintrack.Api_Class.SOAP_ACTION;
-import static com.edge.fintrack.Api_Class.URL_state_and_city;
-import static com.edge.fintrack.Constant.ShowDilog;
-import static com.edge.fintrack.Constant.isInternetOn;
+import static com.edge.fintrack.utility.Api_Class.METHOD_NAME_getCity;
+import static com.edge.fintrack.utility.Api_Class.METHOD_NAME_getState;
+import static com.edge.fintrack.utility.Api_Class.NAMESPACE;
+import static com.edge.fintrack.utility.Api_Class.SOAP_ACTION;
+import static com.edge.fintrack.utility.Api_Class.URL_state_and_city;
+import static com.edge.fintrack.utility.Constant.ShowDilog;
+import static com.edge.fintrack.utility.Constant.isInternetOn;
 
 public class TermInsuranceActivity extends AppCompatActivity {
     public final String TAG = "TermInsuranceActivity";

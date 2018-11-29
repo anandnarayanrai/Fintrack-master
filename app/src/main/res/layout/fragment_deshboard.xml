@@ -1,219 +1,275 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorWhite"
+    android:background="@color/color_gray0"
     tools:context=".dashboard.DeshboardFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="10dp">
+        android:padding="5dp">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/tv_portfolio"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                android:text="My Portfolio"
-                android:textAllCaps="true"
-                android:textColor="@color/colorBlack"
-                android:textSize="18sp" />
-
-            <View
-                android:id="@+id/divider7"
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layout_below="@+id/tv_portfolio"
-                android:background="?android:attr/listDivider" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/divider7"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal"
-                android:weightSum="2">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_weight="1.5"
-                    android:src="@drawable/ic_sip" />
-
-                <View
-                    android:layout_width="2dp"
-                    android:layout_height="match_parent"
-                    android:background="?android:attr/listDivider" />
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp">
-
-                    <TextView
-                        android:id="@+id/tv_portfoliosec"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/signup_text" />
-
-                    <TextView
-                        android:id="@+id/tv_addportfolio"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/tv_portfoliosec"
-                        android:background="@drawable/background_button"
-                        android:padding="3dp"
-                        android:paddingStart="7dp"
-                        android:paddingEnd="7dp"
-                        android:text="My Portfolio"
-                        android:textColor="@color/colorWhite" />
-                </RelativeLayout>
-            </LinearLayout>
-        </RelativeLayout>
-
-        <RelativeLayout
+        <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
+            android:animateLayoutChanges="true"
+            android:animationCache="true"
+            android:fadingEdge="horizontal"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="2dp"
+            app:cardUseCompatPadding="true">
 
-            <TextView
-                android:id="@+id/tv_investment"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                android:text="My Investment"
-                android:textAllCaps="true"
-                android:textColor="@color/colorBlack"
-                android:textSize="18sp" />
+                android:layout_margin="10dp">
 
-            <View
-                android:id="@+id/divider11"
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layout_below="@+id/tv_investment"
-                android:background="?android:attr/listDivider" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/divider11"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal"
-                android:weightSum="2">
-
-                <ImageView
+                <TextView
+                    android:id="@+id/tv_portfolio"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_weight="1.5"
-                    android:src="@drawable/ic_sip" />
+                    android:layout_margin="5dp"
+                    android:text="My Portfolio"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp" />
 
                 <View
-                    android:layout_width="2dp"
-                    android:layout_height="match_parent"
+                    android:id="@+id/divider7"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/tv_portfolio"
                     android:background="?android:attr/listDivider" />
 
-                <RelativeLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="5dp">
+                    android:layout_below="@+id/divider7"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
 
-                    <TextView
-                        android:id="@+id/tv_investmentdes"
+                    <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/signup_text" />
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1.5"
+                        android:src="@drawable/ic_suitcase" />
 
-                    <TextView
-                        android:id="@+id/tv_addinvestment"
-                        android:layout_width="wrap_content"
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="?android:attr/listDivider" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/tv_investmentdes"
-                        android:background="@drawable/background_button"
-                        android:padding="3dp"
-                        android:paddingStart="7dp"
-                        android:paddingEnd="7dp"
-                        android:text="Add Investment"
-                        android:textColor="@color/colorWhite" />
-                </RelativeLayout>
-            </LinearLayout>
-        </RelativeLayout>
+                        android:padding="5dp">
 
-        <RelativeLayout
+                        <TextView
+                            android:id="@+id/tv_portfoliosec"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxEms="16"
+                            android:text="@string/signup_text" />
+
+                        <TextView
+                            android:id="@+id/tv_addportfolio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_portfoliosec"
+                            android:background="@drawable/background_button"
+                            android:padding="3dp"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:text="My Portfolio"
+                            android:textColor="@color/colorWhite" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
+            android:animateLayoutChanges="true"
+            android:animationCache="true"
+            android:fadingEdge="horizontal"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="2dp"
+            app:cardUseCompatPadding="true">
 
-            <TextView
-                android:id="@+id/tv_money"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                android:text="My Money"
-                android:textAllCaps="true"
-                android:textColor="@color/colorBlack"
-                android:textSize="18sp" />
+                android:layout_margin="10dp"
+                android:layout_marginTop="10dp">
 
-            <View
-                android:id="@+id/divider9"
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layout_below="@+id/tv_money"
-                android:background="?android:attr/listDivider" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/divider9"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal"
-                android:weightSum="2">
-
-                <ImageView
+                <TextView
+                    android:id="@+id/tv_investment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_weight="1.5"
-                    android:src="@drawable/ic_sip" />
+                    android:layout_margin="5dp"
+                    android:text="My Investment"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp" />
 
                 <View
-                    android:layout_width="2dp"
-                    android:layout_height="match_parent"
+                    android:id="@+id/divider11"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/tv_investment"
                     android:background="?android:attr/listDivider" />
 
-                <RelativeLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="5dp">
+                    android:layout_below="@+id/divider11"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
 
-                    <TextView
-                        android:id="@+id/tv_monetDes"
+                    <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/signup_text" />
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1.5"
+                        android:src="@drawable/ic_equity" />
 
-                    <TextView
-                        android:id="@+id/tv_Addmonet"
-                        android:layout_width="wrap_content"
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="?android:attr/listDivider" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/tv_monetDes"
-                        android:background="@drawable/background_button"
-                        android:padding="3dp"
-                        android:paddingStart="7dp"
-                        android:paddingEnd="7dp"
-                        android:text="Add Money"
-                        android:textColor="@color/colorWhite" />
-                </RelativeLayout>
-            </LinearLayout>
+                        android:padding="5dp">
 
-        </RelativeLayout>
+                        <TextView
+                            android:id="@+id/tv_investmentdes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxEms="16"
+                            android:text="@string/signup_text" />
+
+                        <TextView
+                            android:id="@+id/tv_addinvestment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_investmentdes"
+                            android:background="@drawable/background_button"
+                            android:maxEms="16"
+                            android:padding="3dp"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:text="Add Investment"
+                            android:textColor="@color/colorWhite" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:animationCache="true"
+            android:fadingEdge="horizontal"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="2dp"
+            app:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv_money"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="My Money"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp" />
+
+                <View
+                    android:id="@+id/divider9"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/tv_money"
+                    android:background="?android:attr/listDivider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/divider9"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1.5"
+                        android:src="@drawable/ic_sip" />
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="?android:attr/listDivider" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/tv_monetDes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxEms="16"
+                            android:text="@string/signup_text" />
+
+                        <TextView
+                            android:id="@+id/tv_Addmonet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_monetDes"
+                            android:background="@drawable/background_button"
+                            android:padding="3dp"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:text="Add Money"
+                            android:textColor="@color/colorWhite" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
     </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:background="@color/colorWhiteTransparent"
+        android:padding="1dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.edge.fintrack.utility.NonSwipeableViewPager
+            android:id="@+id/vp_advertising"
+            android:layout_width="match_parent"
+            android:layout_height="45dp" />
+    </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.RelativeLayout;
 
 import com.edge.fintrack.R;
-import com.edge.fintrack.RecyclerTouchListener;
+import com.edge.fintrack.utility.RecyclerTouchListener;
 import com.edge.fintrack.fixed_deposit.model_class.ViewFixed_ListItem;
 import com.edge.fintrack.portfolio.equity.AddEquityActivity;
 import com.edge.fintrack.portfolio.equity.AllEquityActivity;

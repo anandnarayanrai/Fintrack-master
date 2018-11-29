@@ -1,4 +1,4 @@
-package com.edge.fintrack;
+package com.edge.fintrack.utility;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;

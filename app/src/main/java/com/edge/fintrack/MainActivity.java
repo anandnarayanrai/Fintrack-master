@@ -43,6 +43,7 @@ import com.edge.fintrack.calculator.CalculatorActivity;
 import com.edge.fintrack.ckyc.CkycUpdateActivity;
 import com.edge.fintrack.dashboard.DeshboardFragment;
 import com.edge.fintrack.product.ProductFragment;
+import com.edge.fintrack.utility.Constant;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
@@ -66,12 +67,12 @@ import java.util.Locale;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-import static com.edge.fintrack.Api_Class.METHOD_NAME_getInvestorProfilePhoto;
-import static com.edge.fintrack.Api_Class.METHOD_NAME_updateInvestorProfilePhoto;
-import static com.edge.fintrack.Api_Class.NAMESPACE;
-import static com.edge.fintrack.Api_Class.SOAP_ACTION;
-import static com.edge.fintrack.Api_Class.URL_InvestorProfilePhoto;
-import static com.edge.fintrack.Constant.ShowDilog;
+import static com.edge.fintrack.utility.Api_Class.METHOD_NAME_getInvestorProfilePhoto;
+import static com.edge.fintrack.utility.Api_Class.METHOD_NAME_updateInvestorProfilePhoto;
+import static com.edge.fintrack.utility.Api_Class.NAMESPACE;
+import static com.edge.fintrack.utility.Api_Class.SOAP_ACTION;
+import static com.edge.fintrack.utility.Api_Class.URL_InvestorProfilePhoto;
+import static com.edge.fintrack.utility.Constant.ShowDilog;
 
 
 public class MainActivity extends AppCompatActivity

@@ -29,7 +29,7 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.edge.fintrack.Constant.ShowDilog;
+import static com.edge.fintrack.utility.Constant.ShowDilog;
 
 /**
  * A simple {@link Fragment} subclass.

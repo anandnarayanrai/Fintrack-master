@@ -13,9 +13,9 @@ import android.widget.EditText;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 
-import static com.edge.fintrack.Constant.ShowDilog;
-import static com.edge.fintrack.Constant.isInternetOn;
-import static com.edge.fintrack.Constant.isValidEmaillId;
+import static com.edge.fintrack.utility.Constant.ShowDilog;
+import static com.edge.fintrack.utility.Constant.isInternetOn;
+import static com.edge.fintrack.utility.Constant.isValidEmaillId;
 
 public class ForgotPasswordActivity extends AppCompatActivity {
 

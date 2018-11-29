@@ -1,4 +1,4 @@
-package com.edge.fintrack;
+package com.edge.fintrack.utility;
 
 import android.text.Editable;
 import android.text.TextWatcher;

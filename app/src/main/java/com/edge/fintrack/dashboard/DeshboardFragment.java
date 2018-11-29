@@ -4,18 +4,27 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.edge.fintrack.R;
+import com.edge.fintrack.anim_viewpager.DepthPageTransformer;
+import com.edge.fintrack.mutual_funds.SlidingBanner_Adapter;
 import com.edge.fintrack.portfolio.PortfolioActivity;
 import com.edge.fintrack.product.ProductFragment;
 
+import java.util.ArrayList;
 import java.util.Objects;
+import java.util.Timer;
+import java.util.TimerTask;
+
+import static com.edge.fintrack.utility.Constant.startNewActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -35,6 +44,11 @@ public class DeshboardFragment extends Fragment implements View.OnClickListener 
     private String mParam1;
     private String mParam2;
     private OnFragmentInteractionListener mListener;
+    private static final Integer[] IMAGES = {R.drawable.background_nav_header, R.drawable.advertising_image3};
+    private static ViewPager vp_advertising;
+    private static int currentPage = 0;
+    private static int NUM_PAGES = 0;
+    private ArrayList<Integer> ImagesArray = new ArrayList<Integer>();
 
     public DeshboardFragment() {
         // Required empty public constructor
@@ -81,7 +95,38 @@ public class DeshboardFragment extends Fragment implements View.OnClickListener 
         tv_Addmonet = (TextView) view.findViewById(R.id.tv_Addmonet);
         tv_Addmonet.setOnClickListener(this);
 
+        vp_advertising = (ViewPager) view.findViewById(R.id.vp_advertising);
+        vp_advertising.setPageTransformer(true, new DepthPageTransformer());
+        init();
         return view;
+    }
+
+    private void init() {
+        for (int i = 0; i < IMAGES.length; i++)
+            ImagesArray.add(IMAGES[i]);
+
+        vp_advertising.setAdapter(new SlidingBanner_Adapter(getActivity(), ImagesArray));
+
+        NUM_PAGES = IMAGES.length;
+
+        // Auto start of viewpager
+        final Handler handler = new Handler();
+        final Runnable Update = new Runnable() {
+            public void run() {
+                if (currentPage == NUM_PAGES) {
+                    currentPage = 0;
+                }
+                vp_advertising.setCurrentItem(currentPage++, true);
+            }
+        };
+        Timer swipeTimer = new Timer();
+        swipeTimer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                handler.post(Update);
+            }
+        }, 10000, 30000);
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -117,6 +162,8 @@ public class DeshboardFragment extends Fragment implements View.OnClickListener 
                 fragmentTransaction.commit();
                 break;
             case R.id.tv_Addmonet:
+
+                startNewActivity(getContext(), "com.fintrackindia.investmentmanager");
                /* Intent intentUpdateProfile = new Intent(getActivity(), AddExpenseActivity.class);
                 intentUpdateProfile.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intentUpdateProfile);
