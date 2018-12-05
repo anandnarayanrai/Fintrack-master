@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,7 +40,7 @@ public class ProductFragment extends Fragment implements View.OnClickListener {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    private static final Integer[] IMAGES = {R.drawable.mutual_fund, R.drawable.fixed_deposit};
+    private static final Integer[] IMAGES = {R.drawable.mutual_fund, R.drawable.fixed_deposit, R.drawable.mutual_fund, R.drawable.fixed_deposit,};
     private static ViewPager mPager;
     private static int currentPage = 0;
     private static int NUM_PAGES = 0;
@@ -49,6 +50,7 @@ public class ProductFragment extends Fragment implements View.OnClickListener {
     private String mParam2;
     private OnFragmentInteractionListener mListener;
     private ArrayList<Integer> ImagesArray = new ArrayList<Integer>();
+    SlidingBanner_Adapter slidingBannerAdapter;
 
     public ProductFragment() {
         // Required empty public constructor
@@ -57,6 +59,7 @@ public class ProductFragment extends Fragment implements View.OnClickListener {
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
+     *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
      * @return A new instance of fragment ProductFragment.
@@ -110,7 +113,34 @@ public class ProductFragment extends Fragment implements View.OnClickListener {
         tv_fixed_deposit.setClickable(true);
         tv_bonds.setClickable(true);
         tv_equity_trading.setClickable(true);
+
+        slidingBannerAdapter = new SlidingBanner_Adapter(getActivity(), ImagesArray);
         init();
+        mPager.setCurrentItem(1);
+        mPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageSelected(int index) {
+                Log.v("onPageSelected", String.valueOf(index));
+            }
+
+            @Override
+            public void onPageScrolled(int arg0, float arg1, int arg2) {
+                // Log.v("onPageScrolled", "");
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+                Log.v("onPageScrollState", String.valueOf(state));
+
+                if (state == ViewPager.SCROLL_STATE_IDLE) {
+                    int index = mPager.getCurrentItem();
+                    if (index == 0)
+                        mPager.setCurrentItem(slidingBannerAdapter.getCount() - 2, false);
+                    else if (index == slidingBannerAdapter.getCount() - 1)
+                        mPager.setCurrentItem(1, false);
+                }
+            }
+        });
         return view;
     }
 
@@ -118,7 +148,8 @@ public class ProductFragment extends Fragment implements View.OnClickListener {
         for (int i = 0; i < IMAGES.length; i++)
             ImagesArray.add(IMAGES[i]);
 
-        mPager.setAdapter(new SlidingBanner_Adapter(getActivity(), ImagesArray));
+        // slidingBannerAdapter = new SlidingBanner_Adapter(getActivity(), ImagesArray);
+        mPager.setAdapter(slidingBannerAdapter);
 
         NUM_PAGES = IMAGES.length;
 

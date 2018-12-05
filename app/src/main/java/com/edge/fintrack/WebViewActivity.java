@@ -16,6 +16,7 @@ import android.webkit.WebViewClient;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import java.util.Objects;
 
@@ -65,10 +66,13 @@ public class WebViewActivity extends AppCompatActivity {
         mProgressDialog.setCancelable(true);
 
         WebView htmlWebView = (WebView) findViewById(R.id.webView);
+        htmlWebView.setInitialScale(200);
         htmlWebView.setWebViewClient(new CustomWebViewClient());
         WebSettings webSetting = htmlWebView.getSettings();
         webSetting.setJavaScriptEnabled(true);
         webSetting.setDisplayZoomControls(true);
+        webSetting.setAllowContentAccess(true);
+        //htmlWebView.loadUrl("https://gpportal.azurewebsites.net/NGGPBotWeb?un=gopidholakiya987@gmail.com");
         htmlWebView.loadUrl(url);
 
         //htmlWebView.loadUrl("file:///android_asset/about_us.html");   // fails here
@@ -91,7 +95,6 @@ public class WebViewActivity extends AppCompatActivity {
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             // finally change the color
             window.setStatusBarColor(getResources().getColor(R.color.colorAccent));*/
-
             View decor = getWindow().getDecorView();
             decor.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         }
@@ -112,7 +115,6 @@ public class WebViewActivity extends AppCompatActivity {
             } catch (NullPointerException e) {
                 e.printStackTrace();
             }
-
             view.loadUrl(url);
             return true;
         }
@@ -120,7 +122,6 @@ public class WebViewActivity extends AppCompatActivity {
         //Show loader on url load
         public void onLoadResource(WebView view, String url) {
             Log.i(TAG, "onLoadResource : " + url);
-
         }
 
         public void onPageFinished(WebView view, String url) {

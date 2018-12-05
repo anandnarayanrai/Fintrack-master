@@ -8,16 +8,22 @@ import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.OrientationHelper;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.edge.fintrack.R;
+import com.edge.fintrack.WebViewActivity;
 import com.edge.fintrack.anim_viewpager.DepthPageTransformer;
 import com.edge.fintrack.mutual_funds.SlidingBanner_Adapter;
 import com.edge.fintrack.portfolio.PortfolioActivity;
 import com.edge.fintrack.product.ProductFragment;
+import com.edge.fintrack.utility.RecyclerTouchListener;
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -49,6 +55,8 @@ public class DeshboardFragment extends Fragment implements View.OnClickListener 
     private static int currentPage = 0;
     private static int NUM_PAGES = 0;
     private ArrayList<Integer> ImagesArray = new ArrayList<Integer>();
+
+    private RecyclerView r_view_advertising;
 
     public DeshboardFragment() {
         // Required empty public constructor
@@ -97,6 +105,29 @@ public class DeshboardFragment extends Fragment implements View.OnClickListener 
 
         vp_advertising = (ViewPager) view.findViewById(R.id.vp_advertising);
         vp_advertising.setPageTransformer(true, new DepthPageTransformer());
+
+        r_view_advertising = (RecyclerView) view.findViewById(R.id.r_view_advertising);
+        r_view_advertising.addOnItemTouchListener(new RecyclerTouchListener(getContext(), r_view_advertising, new RecyclerTouchListener.ClickListener() {
+            @Override
+            public void onClick(View view, int position) {
+               /* currentCategory = categoriesList[position];
+                selectedCategory = currentCategory.getName();
+                tv_category.setText(currentCategory.getName());
+                rl_touch.setVisibility(View.GONE);*/
+                if (position > 2) {
+                    Intent intentWebView = new Intent(getContext(), WebViewActivity.class);
+                    intentWebView.putExtra("url", "http://blog.fintrackindia.com/Details/Index/5/mfs-pump-rs-11000-cr-in-equities-last-fortnig");
+                    intentWebView.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intentWebView);
+                }
+            }
+
+            @Override
+            public void onLongClick(View view, int position) {
+
+            }
+        }));
+        prepareData();
         init();
         return view;
     }
@@ -126,6 +157,24 @@ public class DeshboardFragment extends Fragment implements View.OnClickListener 
                 handler.post(Update);
             }
         }, 10000, 30000);
+
+    }
+
+    private void prepareData() {
+        ArrayList<Model> list = new ArrayList<>();
+        list.add(new Model(Model.FUNCTION_TYPE, "My Portfolio", "Hi. I display a cool image too besides the omnipresent TextView.", "My Portfolio", R.drawable.ic_suitcase));
+        list.add(new Model(Model.FUNCTION_TYPE, "My Investment", "Hey. Pressing the FAB button will playback an audio file on loop.", "Add Investment", R.drawable.ic_equity));
+        list.add(new Model(Model.FUNCTION_TYPE, "My Money", "Hi again. Another cool image here. Which one is better?", "Add Money", R.drawable.ic_sip));
+        list.add(new Model(Model.NEWS_TYPE, "MUTUAL FUND", "Mutual fund houses have made investments of over Rs 11,000 crore in domestic equities.", "Read More", 0));
+        list.add(new Model(Model.NEWS_TYPE, "MUTUAL FUND", "Mutual fund houses have made investments of over Rs 11,000 crore in domestic equities in the first two weeks of this month despite volatility in the stock markets,", "Read More", 0));
+        list.add(new Model(Model.NEWS_TYPE, "MUTUAL FUND", "Mutual fund houses have made investments of over Rs 11,000 crore in domestic equities in the first two weeks of this month despite volatility in the stock markets, even as foreign investors pulled out a massive Rs 19,000 crore. This comes following a net infusion of Rs 11,600 crore in equities by the fund managers a ...", "Read More", 0));
+
+        MultiViewTypeAdapter adapter = new MultiViewTypeAdapter(list, getContext());
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), OrientationHelper.VERTICAL, false);
+
+        r_view_advertising.setLayoutManager(linearLayoutManager);
+        r_view_advertising.setItemAnimator(new DefaultItemAnimator());
+        r_view_advertising.setAdapter(adapter);
 
     }
 

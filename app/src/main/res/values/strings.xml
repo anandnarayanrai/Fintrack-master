@@ -220,7 +220,6 @@
         <item>Mutual Fund</item>
         <item>Equity</item>
         <item>Commodity</item>
-        <item>PMS</item>
     </string-array>
 
     <string-array name="gender_list">
